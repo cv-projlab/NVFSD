@@ -1,0 +1,27 @@
+.vscode
+
+nebfir.code-workspace
+
+*.hdnb
+check_gpu_usage.sh
+parser.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+.ipynb_checkpoints
+
+# C extension
+build/
+*.so
+*.cc
+*.c
+*.cpp
+*.egg-info/
+
+runs
+data/runs
+
+
+data/inp/pretrain/TimeSformer_divST_96x4_224_K600.pyth
+tensorboard_test.py
+ev_stream.py

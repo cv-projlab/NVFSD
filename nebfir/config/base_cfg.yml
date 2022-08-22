@@ -1,0 +1,111 @@
+trainer:
+  seed: 0
+  device: cuda:0
+  data_parallel: False
+
+  epochs: 100
+  batch_size: 128
+  workers: 8
+  pin_memmory: True
+  weights: _NO_WEIGHTS_
+  transforms: 
+    - rnd_erase
+    - affine
+
+  description: 'Train the model on the SynFED dataset. '
+
+  model: 
+  
+    name: InceptionI3d
+    # name: i3d
+    num_classes: 30
+    in_channels: 1
+    final_endpoint: Logits
+    
+    # name: TimeSformer
+    # # name: tsf
+    # num_classes: 30
+    # in_chans: 1
+    # num_frames: 12
+    # attention_type: divided_space_time
+    # pretrained_model: /home/andregraca/TimeSformer/models/TimeSformer_divST_8x32_224_K600.pyth 
+
+    # name: MViT # Only for 3D/4D inputs. No time dimension
+
+  optimizer:
+    name: sgd
+    lr: 1.0e-02
+    momentum: .9
+
+    # name: adam
+    # lr: 1.0e-02
+    # betas: 
+    #   - .9
+    #   - .999
+    # weight_decay: 1.0e-02
+    # eps: 1.0e-08
+
+    # name: adamw
+    # lr: 1.0e-02
+    # betas: 
+    #   - .9
+    #   - .999  
+    # weight_decay: 1.0e-02
+    # eps: 1.0e-08
+    # amsgrad: False
+
+    # name: sparse_adam
+    # lr: 1.0e-02
+    # betas: 
+    #   - .9
+    #   - .999  
+    # eps: 1.0e-08
+
+  scheduler:
+    name: plateau
+    mode: max
+    factor: .75
+    patience: 1
+    min_lr: 1.0e-08
+
+    # name: multi_step
+    # milestones:
+    #   - 30
+    #   - 60
+    # gamma: .1
+
+    # name: step
+    # step_size: 10
+    # gamma: .1
+
+    # name: cosine_annealing
+    # tmax: 5
+    # eta_min: 1.0e-08
+    # last_epoch: -1
+
+  criterion:
+    name: ce
+
+    # name: triplet
+
+    # name: batch_all_triplet
+    # margin: 1.
+
+data:
+  dataset:
+    name: SynFED
+    dT: 40
+    subclipT: 500
+    stride: 1
+    type: events_aets40
+
+    recno: 10
+    fakeno: 15
+    impostors: True
+    authentics: True
+
+  lists:
+    train: ''
+    test: ''
+
+DEBUG: False
