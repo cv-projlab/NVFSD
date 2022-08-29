@@ -111,7 +111,7 @@ bash scripts/train.sh
 ## CITATION
 
 If you find this repository useful please consider citing our work.
-<!-- ```bibtex
+```bibtex
 @article{,
   author = {Gonçalo Moreira, André Graça, Bruno Silva, Pedro Martins, Jorge Batista},
   title = {Neuromorphic Event-based Face Identity Recognition},
@@ -120,5 +120,5 @@ If you find this repository useful please consider citing our work.
   month = aug,
   note = {Unpublished paper},
 }
-``` -->
+```
 
