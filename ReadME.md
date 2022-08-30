@@ -118,7 +118,6 @@ If you find this repository useful please consider citing our work.
   journal = {26TH International Conference on Pattern Recognition}
   year = {2022},
   month = aug,
-  note = {Unpublished paper},
 }
 ```
 
