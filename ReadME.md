@@ -33,12 +33,12 @@ source scripts/build_environment.sh nebfir
 
 ### Download the Datasets
 
-Download the datasets to the `data/datasets/` folder or change the data path later. Contact us at `email@isr.uc.pt` to receive the datasets passwords.
+Download the datasets to the `data/datasets/` folder or change the data path later. Contact us at `cv-projlab@isr.uc.pt` to receive the datasets passwords.
 
   | DATASET | Number of Event Files | <div style="width:655px"></div> Structure |
   |:---:|:---:|:---:|
   | [NVFSD](https://isrucpt-my.sharepoint.com/:u:/g/personal/andre_graca_isr_uc_pt/Ean8_iZbUrxHpp4hi2918oAB-34Lg1kI8sAyqDtxksSfOA?e=zGghVG) | 436 | `NVFSD/Events/user<USER_ID>/task<TAKS_ID>/recording<RECORDING_ID>/pc.csv` |
-  | [SynFED](https://isrucpt-my.sharepoint.com/:u:/g/personal/andre_graca_isr_uc_pt/ESnovcskxAtEu_o1-pAFshABZKhrDz4i_yDyTFkW6A0ZqQ?e=2rBpbi) | 6536 | `SynFED/Events/<REAL-FAKE>/user<USER_ID>/recording<RECORDING_ID>/pc.csv` |
+  | SynFED | 6536 | `SynFED/Events/<REAL-FAKE>/user<USER_ID>/recording<RECORDING_ID>/pc.csv` |
 
 <div align="center">
 
